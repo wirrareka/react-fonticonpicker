@@ -9,9 +9,7 @@
   "scripts": {
     "test": "eslint src/js/** src/docs/components/** src/docs/helpers/** && stylelint src/scss/** && jest",
     "start": "webpack-dev-server --hot --config webpack.dev.config.js --host 0.0.0.0 --open",
-    "docs": "webpack --config webpack.doc.config.js",
-    "build": "webpack --config webpack.config.js && node scripts/cleanupDist.js",
-    "prepare": "webpack --config webpack.config.js && node scripts/cleanupDist.js"
+    "docs": "webpack --config webpack.doc.config.js"
   },
   "repository": {
     "type": "git",
@@ -95,12 +93,13 @@
     "webpack": "^4.4.1",
     "webpack-bundle-analyzer": "^2.11.1",
     "webpack-cli": "^2.0.13",
-    "webpack-dev-server": "^3.1.1"
-  },
-  "dependencies": {
+    "webpack-dev-server": "^3.1.1",
     "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
     "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    
   },
   "publishConfig": {
     "access": "public"
